@@ -19,13 +19,16 @@ export default {
 
 <style scoped lang="scss">
 .cart-container {
-    padding: 1rem 2rem 2.5rem 2rem;
+    padding: 1rem 2rem 2.5rem 1.25rem;
 
     & .fake-breadcrumb {
         float: left;
     }
     & .fake-breadcrumb a {
         color: sienna;
+    }
+    & .fake-breadcrumb a:last-child {
+        text-decoration: none;
     }
     & .fake-shopping-cart {
         float: right;

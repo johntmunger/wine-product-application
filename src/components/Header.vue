@@ -2,7 +2,7 @@
     <header>
         <div class="navbar navbar-dark bg-dark shadow-sm">
             <div class="container cart">
-                <a href="#" class="navbar-brand d-flex align-items-center">
+                <a href="/" class="navbar-brand d-flex align-items-center">
                     <span class="iconify" data-icon="mdi:glass-tulip"></span>
                     <div class="title">Wine Product List</div>
                 </a>
