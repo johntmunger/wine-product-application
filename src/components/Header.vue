@@ -21,11 +21,15 @@ export default {
 </script>
 
 <style scoped>
+.bg-dark {
+    background-color: darkslategray !important;
+}
 svg {
     height: 2rem;
     width: 2rem;
 }
 .title {
     padding-left: .25rem;
+    letter-spacing: .0145rem;
 }  
 </style>
