@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
-import ProductList from "../pages/ProductList.vue";
+import Main from '@/views/Main.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    component: ProductList
+    component: Main
   },
 ]
 
