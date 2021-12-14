@@ -1,12 +1,12 @@
 import Axios, { AxiosInstance } from "axios";
-import { apiConstants, ApiConstantsInterface } from "@/constants/api.constants";
+import { apiConstants, IApiConstantsInterface } from "@/constants/api.constants";
 import { IProduct, IProductService } from "@/interfaces/product";
 
 class AppStoreService implements IProductService {
     protected axios: AxiosInstance;
-    protected config: ApiConstantsInterface;
+    protected config: IApiConstantsInterface;
 
-    constructor(config: ApiConstantsInterface) {
+    constructor(config: IApiConstantsInterface) {
         this.config = config;
         this.axios = Axios.create({
             baseURL: config.baseUrl,
@@ -18,6 +18,12 @@ class AppStoreService implements IProductService {
         const response = await this.axios.get(`${this.config.productEndpoint}/${id}`);
         // console.log(response.data);
         return response.data;
+    }
+
+    async getProductDetail(id: IProduct['id']): Promise<IProduct> {
+        const response = await this.axios.get(`${this.config.productEndpoint}/${id}`);
+        // console.log(response.data);
+        return response.data.details;
     }
 
     async getProducts(): Promise<IProduct[]> {
