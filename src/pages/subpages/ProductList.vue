@@ -5,22 +5,22 @@
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col" v-for="product in products" :key="product.id">
                         <div class="card shadow-sm">
-                            <img :src="product.imageUrl" height="50" />
-                            <div class="card-body">
-                            <p class="card-text">{{ product.size }}</p>
-                            <p class="card-text">{{ product.reviews }}</p>
-                            <p class="card-text">{{ product.likes }}</p>
-                            <p class="card-text">${{ product.proce }}</p>
-                            <p class="card-text">{{ product.caseGift }}</p>
-                            <p class="card-text">{{ product.caseAvailability }}</p>
-   
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <a href="products/details" class="btn btn-sm btn-outline-secondary">View</a>
-                                    <a href="products/details" class="btn btn-sm btn-outline-secondary">{{ product.btnSingle }}</a>
-                                </div>
-                                <small class="text-muted">{{ product.likes }} likes</small>
+                            <div class="thumbnail-container">
+                                <a href="products/details"><img class="thumbnail" :src="product.imageUrl" /></a>
                             </div>
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <a href="products/details">{{ product.title }}</a>
+                                </p>
+                                <p class="card-text">{{ product.size }}</p>
+                                <p class="card-text">${{ product.price }}</p>
+                                <p class="card-text">{{ product.delivery }}</p>
+                                <p class="card-text">{{ product.caseGift }}</p>
+                                <div class="align-items-center">
+                                    <div class="btn-group">
+                                        <a href="#" class="btn btn-sm btn-outline-primary">{{ product.btnSingle }}</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -32,22 +32,41 @@
 
 <script lang="ts">
 import { ref, onMounted } from "vue";
+import { Product } from "@/interfaces/product";
+import { fakeStoreService } from "@/services/FakeService";
 
 export default {
-    name: "ProductList",
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+    name: "Products",
     setup() {
-        const products = ref([]);
+        const products = ref<Product[]>([]);
 
-        onMounted(async () => {
-            const response = await fetch("http://localhost/5280/products");
-            console.log(response.json());
-            products.value = await response.json();
-        })
+        onMounted(() => {
+            fetchProducts();
+        });
+
+        const fetchProducts = async (): Promise<void> => {
+            products.value = await fakeStoreService.getProducts();
+        };
 
         return {
-            products
+            products,
+            fetchProducts,
         }
     }
 }
 </script>
+
+<style scoped lang="scss">
+.card {
+    min-height: 500px;
+}
+.thumbnail-container {
+    text-align: center;
+    padding: 1.25rem;
+
+    & img {
+        width: 80%;
+        height: 80%;
+    }
+}
+</style>

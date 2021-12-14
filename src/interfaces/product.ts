@@ -1,0 +1,17 @@
+export interface Product {
+    id: number,
+    type: string,
+    title: string,
+    imageUrl: string,
+    size: string,
+    wineryDirect: number,
+    reviews: number,
+    likes: number,
+    price: string,
+    InStock: number,
+    delivery: string,
+    caseGift: string,
+    btnSingle: string,
+    caseAvailability: number,
+    btnCase: string,
+}

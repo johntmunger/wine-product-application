@@ -6,7 +6,7 @@
     "dev": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "api": "json-server --watch db.json --port 5280",
+    "api": "json-server --watch api.json --port 5280",
     "serve": "concurrently --kill-others \"npm run dev\" \"npm run api\""
   },
   "dependencies": {

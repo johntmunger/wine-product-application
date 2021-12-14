@@ -1,0 +1,68 @@
+{
+   "products":[
+      {
+         "id":1,
+         "type":"Wine",
+         "title":"Butter Knife Chardonnay",
+         "imageUrl":"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hfc/h7c/15078178848798.png",
+         "size":"750ml",
+         "wineryDirect":1,
+         "reviews":217,
+         "likes":32,
+         "price":"21.99",
+         "InStock":1,
+         "delivery":"Delivery Available",
+         "caseGift":"Send case as a gift!",
+         "btnSingle":"Add to Cart",
+         "caseAvailability":1,
+         "btnCase":"Add Case",
+         "details":[
+            {
+               "description":"California- A slice of Chardonnay heaven! With silky pear, baked apple and toasted spice, Chardonnay lovers will definitely make Butter Knife their go to wine. Pairs with poultry, white creamy sauces on pasta or seafood.",
+               "brand":"Butter Knife",
+               "state":"California",
+               "region":"Central Coast",
+               "wineType":"White Wine",
+               "varietal":"Chardonnay",
+               "body":"Medium",
+               "style":"Elegant",
+               "abv":"14.5%",
+               "taste":"Nutmeg, Butter",
+               "sku":174052750
+            }
+         ]
+      },
+      {
+         "id":2,
+         "type":"Wine",
+         "title":"Double Black Zinfandel Paso Robles",
+         "wineryDirect":0,
+         "imageUrl":"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h85/hc1/13287126728734.png",
+         "size":"750ml",
+         "reviews":198,
+         "likes":72,
+         "price":"13.99",
+         "InStock":1,
+         "delivery":"Delivery Available",
+         "caseGift":"Send case as a gift!",
+         "btnSingle":"Add to Cart",
+         "caseAvailability":1,
+         "btnCase":"Add Case",
+         "details":[
+            {
+               "description":"Paso Robles, California- This full-bodied, elegant wine explodes with dark berry flavors and finishes with cracked pepper spice. Excellent with BBQ ribs, skirt steak, grilled sausages, and pasta marinara.",
+               "brand":"Double Black",
+               "state":"California",
+               "region":"Upper Coast",
+               "wineType":"Red Wine",
+               "varietal":"Zinfandel",
+               "body":"Full-bodied",
+               "style":"Elegant",
+               "abv":"14.5%",
+               "taste":"Raspberry, Strawberry, Vanilla",
+               "sku":173542750
+            }
+         ]
+      }
+   ]
+}
