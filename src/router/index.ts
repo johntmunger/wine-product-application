@@ -5,14 +5,14 @@ import ProductDetails from '@/pages/subpages/ProductDetails.vue';
 
 const routes: Array<RouteRecordRaw> = [
     {
-        path: '/', redirect: '/products/wine'
+        path: '/', redirect: '/products'
     },
     {
         path: '/products',
         component: Main,
         children: [
-            { path: 'wine', component: ProductList },
-            { path: 'wine/details', component: ProductDetails },
+            { path: '/products', component: ProductList },
+            { path: 'products/details', component: ProductDetails },
         ]
     },
 ]
