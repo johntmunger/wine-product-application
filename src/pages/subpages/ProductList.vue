@@ -37,13 +37,13 @@
 <script lang="ts">
 import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
-import { Product } from "@/interfaces/product";
-import { fakeStoreService } from "@/services/FakeService";
+import { IProduct } from "@/interfaces/product";
+import { appStoreService } from "@/services/appService";
 
 export default {
     name: "Products",
     setup() {
-        const products = ref<Product[]>([]);
+        const products = ref<IProduct[]>([]);
         const router = useRouter();
 
         onMounted(() => {
@@ -51,11 +51,11 @@ export default {
         });
 
         const fetchAllProducts = async (): Promise<void> => {
-            products.value = await fakeStoreService.getProducts();
+            products.value = await appStoreService.getProducts();
         };
 
         const fetchSingleProduct = async(id: number): Promise<void> => {
-            const val = await fakeStoreService.getProduct(id);
+            const val = await appStoreService.getProduct(id);
             await router.push(`/products/${val.id}`);
         }
 

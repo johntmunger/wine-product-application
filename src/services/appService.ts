@@ -1,13 +1,8 @@
 import Axios, { AxiosInstance } from "axios";
 import { apiConstants, ApiConstantsInterface } from "@/constants/api.constants";
-import { Product } from "@/interfaces/product";
+import { IProduct, IProductService } from "@/interfaces/product";
 
-interface IFakeStoreService {
-    getProduct(id: number): Promise<Product>;
-    getProducts(): Promise<Product[]>;
-}
-
-class FakeStoreService implements IFakeStoreService {
+class AppStoreService implements IProductService {
     protected axios: AxiosInstance;
     protected config: ApiConstantsInterface;
 
@@ -19,18 +14,18 @@ class FakeStoreService implements IFakeStoreService {
         });
     }
 
-    async getProduct(id: Product['id']): Promise<Product> {
+    async getProduct(id: IProduct['id']): Promise<IProduct> {
         const response = await this.axios.get(`${this.config.productEndpoint}/${id}`);
         // console.log(response.data);
         return response.data;
     }
 
-    async getProducts(): Promise<Product[]> {
+    async getProducts(): Promise<IProduct[]> {
         const response = await this.axios.get(this.config.productEndpoint);
         // console.log(response.data);
         return response.data;
     }
 }
 
-const fakeStoreService = new FakeStoreService(apiConstants);
-export { fakeStoreService };
+const appStoreService = new AppStoreService(apiConstants);
+export { appStoreService };

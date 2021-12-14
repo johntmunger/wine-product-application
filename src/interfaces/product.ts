@@ -1,4 +1,4 @@
-export interface Product {
+export interface IProduct {
     id: number,
     type: string,
     title: string,
@@ -14,4 +14,10 @@ export interface Product {
     btnSingle: string,
     caseAvailability: number,
     btnCase: string,
+    details: [],
+}
+
+export interface IProductService {
+    getProduct(id: number): Promise<IProduct>;
+    getProducts(): Promise<IProduct[]>;
 }
