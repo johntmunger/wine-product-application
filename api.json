@@ -16,21 +16,19 @@
          "btnSingle":"Add to Cart",
          "caseAvailability":1,
          "btnCase":"Add Case",
-         "details":[
-            {
-               "description":"California- A slice of Chardonnay heaven! With silky pear, baked apple and toasted spice, Chardonnay lovers will definitely make Butter Knife their go to wine. Pairs with poultry, white creamy sauces on pasta or seafood.",
-               "brand":"Butter Knife",
-               "state":"California",
-               "region":"Central Coast",
-               "wineType":"White Wine",
-               "varietal":"Chardonnay",
-               "body":"Medium",
-               "style":"Elegant",
-               "abv":"14.5%",
-               "taste":"Nutmeg, Butter",
-               "sku":174052750
-            }
-         ]
+         "details": {
+            "description":"California- A slice of Chardonnay heaven! With silky pear, baked apple and toasted spice, Chardonnay lovers will definitely make Butter Knife their go to wine. Pairs with poultry, white creamy sauces on pasta or seafood.",
+            "brand":"Butter Knife",
+            "state":"California",
+            "region":"Central Coast",
+            "wineType":"White Wine",
+            "varietal":"Chardonnay",
+            "body":"Medium",
+            "style":"Elegant",
+            "abv":"14.5%",
+            "taste":"Nutmeg, Butter",
+            "sku":174052750
+        }
       },
       {
          "id":2,
@@ -48,21 +46,19 @@
          "btnSingle":"Add to Cart",
          "caseAvailability":1,
          "btnCase":"Add Case",
-         "details":[
-            {
-               "description":"Paso Robles, California- This full-bodied, elegant wine explodes with dark berry flavors and finishes with cracked pepper spice. Excellent with BBQ ribs, skirt steak, grilled sausages, and pasta marinara.",
-               "brand":"Double Black",
-               "state":"California",
-               "region":"Upper Coast",
-               "wineType":"Red Wine",
-               "varietal":"Zinfandel",
-               "body":"Full-bodied",
-               "style":"Elegant",
-               "abv":"14.5%",
-               "taste":"Raspberry, Strawberry, Vanilla",
-               "sku":173542750
-            }
-         ]
+         "details": {
+            "description":"Paso Robles, California- This full-bodied, elegant wine explodes with dark berry flavors and finishes with cracked pepper spice. Excellent with BBQ ribs, skirt steak, grilled sausages, and pasta marinara.",
+            "brand":"Double Black",
+            "state":"California",
+            "region":"Upper Coast",
+            "wineType":"Red Wine",
+            "varietal":"Zinfandel",
+            "body":"Full-bodied",
+            "style":"Elegant",
+            "abv":"14.5%",
+            "taste":"Raspberry, Strawberry, Vanilla",
+            "sku":173542750
+        }
       }
    ]
 }

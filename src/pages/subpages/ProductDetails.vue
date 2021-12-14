@@ -1,8 +1,15 @@
 <template>
   <div class="product-details container">
       <h4>Product Details</h4>
-      {{ product }} <br><br><br>
-      {{ detail }}
+      <div>{{ product.title }}</div>
+        <div class="image-container">
+            <img :src="product.imageUrl" />
+        </div>
+      <div>${{ product.price }}</div>
+      <div>{{ product.delivery }}</div>
+        <hr />
+      <h4>More Details</h4>
+      <div>{{ detail.description }}</div>
   </div>
 </template>
 
@@ -15,7 +22,7 @@ import { appStoreService } from "../../services/appService";
 export default {
     name: "ProductDetails",
     props: {
-        // props go here?
+        // props go here
     },
     setup() {
         const product = ref({} as IProduct | undefined);
@@ -25,7 +32,7 @@ export default {
         onMounted(async () => {
             const int = Number(route.params.id);
             product.value = await appStoreService.getProduct(int);
-            detail.value = await appStoreService.getProductDetail(int);
+            detail.value = await appStoreService.getProductDetails(int);
         });
 
         return {
@@ -35,3 +42,17 @@ export default {
     }
 }
 </script>
+
+<style scoped lang="scss">
+.product-details {
+    & .image-container {
+        text-align: left;
+        padding: 1.5rem;
+
+        & img {
+            width: 40%;
+            height: 40%;
+        }
+    }
+}
+</style>

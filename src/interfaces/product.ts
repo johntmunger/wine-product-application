@@ -14,23 +14,24 @@ export interface IProduct {
     btnSingle: string,
     caseAvailability: number,
     btnCase: string,
-    details: {
-        description: string,
-        brand: string,
-        state: string,
-        region: string,
-        wineType: string,
-        varietal: string,
-        body: string,
-        style: string,
-        abv: string,
-        taste: string,
-        sku: number
-    }
+    details: [IProductDetails]
+}
+
+interface IProductDetails {
+    description: string,
+    brand: string,
+    state: string,
+    region: string,
+    wineType: string,
+    varietal: string,
+    body: string,
+    style: string,
+    abv: string,
+    taste: string,
+    sku: number
 }
 
 export interface IProductService {
     getProduct(id: number): Promise<IProduct>;
-    getProductDetail(id: number): Promise<IProduct>;
     getProducts(): Promise<IProduct[]>;
-  }
+}
