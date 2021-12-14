@@ -26,7 +26,7 @@ export default {
     }
     & .app-breadcrumb a {
         text-decoration: underline;
-        color: saddlebrown;
+        color: #666;
     }
     & .app-breadcrumb span:last-child a {
         text-decoration: none;
@@ -38,7 +38,7 @@ export default {
     & svg {
         width: 2rem;
         height: 2rem;
-        color: saddlebrown;
+        color: #666;
     }
 }
 </style>
