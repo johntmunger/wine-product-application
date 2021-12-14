@@ -6,11 +6,15 @@
                     <div class="col" v-for="product in products" :key="product.id">
                         <div class="card shadow-sm">
                             <div class="thumbnail-container">
-                                <a href="products/details"><img class="thumbnail" :src="product.imageUrl" /></a>
+                                 <button type="button" @click="fetchSingleProduct(product.id)">
+                                     <img class="thumbnail" :src="product.imageUrl" />
+                                </button>
                             </div>
                             <div class="card-body">
                                 <p class="card-text">
-                                    <a href="products/details">{{ product.title }}</a>
+                                    <button type="button" @click="fetchSingleProduct(product.id)">
+                                        {{ product.title }}
+                                    </button>
                                 </p>
                                 <p class="card-text">{{ product.size }}</p>
                                 <p class="card-text">${{ product.price }}</p>
@@ -32,6 +36,7 @@
 
 <script lang="ts">
 import { ref, onMounted } from "vue";
+import { useRouter } from "vue-router";
 import { Product } from "@/interfaces/product";
 import { fakeStoreService } from "@/services/FakeService";
 
@@ -39,18 +44,25 @@ export default {
     name: "Products",
     setup() {
         const products = ref<Product[]>([]);
+        const router = useRouter();
 
         onMounted(() => {
-            fetchProducts();
+            fetchAllProducts();
         });
 
-        const fetchProducts = async (): Promise<void> => {
+        const fetchAllProducts = async (): Promise<void> => {
             products.value = await fakeStoreService.getProducts();
         };
 
+        const fetchSingleProduct = async(id: number): Promise<void> => {
+            const val = await fakeStoreService.getProduct(id);
+            await router.push(`/products/${val.id}`);
+        }
+
         return {
             products,
-            fetchProducts,
+            fetchAllProducts,
+            fetchSingleProduct
         }
     }
 }

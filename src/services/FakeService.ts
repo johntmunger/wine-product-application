@@ -3,6 +3,7 @@ import { apiConstants, ApiConstantsInterface } from "@/constants/api.constants";
 import { Product } from "@/interfaces/product";
 
 interface IFakeStoreService {
+    getProduct(id: number): Promise<Product>;
     getProducts(): Promise<Product[]>;
 }
 
@@ -18,9 +19,15 @@ class FakeStoreService implements IFakeStoreService {
         });
     }
 
+    async getProduct(id: Product['id']): Promise<Product> {
+        const response = await this.axios.get(`${this.config.productEndpoint}/${id}`);
+        // console.log(response.data);
+        return response.data;
+    }
+
     async getProducts(): Promise<Product[]> {
         const response = await this.axios.get(this.config.productEndpoint);
-        console.log(response.data);
+        // console.log(response.data);
         return response.data;
     }
 }
