@@ -12,7 +12,7 @@ const routes: Array<RouteRecordRaw> = [
         component: Main,
         children: [
             { path: '/products', component: ProductList },
-            { path: 'products/details', component: ProductDetails },
+            { path: '/products/details', component: ProductDetails },
         ]
     },
 ]
