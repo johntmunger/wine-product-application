@@ -23,22 +23,22 @@ export default {
 
     & .app-breadcrumb {
         float: left;
+        margin-top: 0.15rem;
     }
     & .app-breadcrumb a {
-        text-decoration: underline;
-        color: #666;
-    }
-    & .app-breadcrumb span:last-child a {
         text-decoration: none;
         pointer-events: none;
+        color: #333;
     }
     & .app-shopping-cart {
         float: right;
+        margin-right: -3px;
+        margin-top: -2px;
     }
     & svg {
         width: 2rem;
         height: 2rem;
-        color: #666;
+        color: #333;
     }
 }
 </style>

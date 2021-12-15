@@ -1,30 +1,25 @@
 <template>
     <div class="product-list">
-        <div class="album py-5 bg-light">
+        <div class="album py-3 bg-light">
             <div class="container">
                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
                     <div class="col" v-for="product in products" :key="product.id">
                         <div class="card shadow-sm">
                             <div class="thumbnail-container">
-                                 <button type="button" @click="fetchSingleProduct(product.id)">
+                                 <a href="#" @click="fetchSingleProduct(product.id)">
                                      <img class="thumbnail" :src="product.imageUrl" />
-                                </button>
+                                </a>
                             </div>
                             <div class="card-body">
-                                <p class="card-text">
-                                    <button type="button" @click="fetchSingleProduct(product.id)">
-                                        {{ product.title }}
-                                    </button>
-                                </p>
-                                <p class="card-text">{{ product.size }}</p>
-                                <p class="card-text">${{ product.price }}</p>
-                                <p class="card-text">{{ product.delivery }}</p>
-                                <p class="card-text">{{ product.caseGift }}</p>
-                                <div class="align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn btn-sm btn-outline-primary">{{ product.btnSingle }}</a>
-                                    </div>
-                                </div>
+                                <h4 class="clickable-title" @click="fetchSingleProduct(product.id)">{{ product.title }}</h4>
+                                <small class="card-text">{{ product.size }}</small>
+                                <p class="card-text price">${{ product.price }}</p>
+                                <small>
+                                    <div>{{ product.delivery }}</div>
+                                    <div>{{ product.caseGift }}</div>
+                                </small>
+                                <button type="button" class="btn btn-sm btn-outline-primary">{{ product.btnSingle }}</button>
+                                <button type="button" class="btn btn-sm btn-outline-primary">{{ product.btnCase }}</button>
                             </div>
                         </div>
                     </div>
@@ -72,13 +67,31 @@ export default {
 .card {
     min-height: 500px;
 }
+.card-body {
+    padding: 1.65rem;
+
+    & .clickable-title {
+        cursor: pointer;
+        margin-bottom: 0;
+    }
+    & .price {
+        font-size: 1.125rem;
+        font-weight: bold;
+        margin-top: .5rem;
+        margin-bottom: 1rem;
+    }
+    & button {
+        margin: 1.5rem .65rem 0 0;
+    }
+}
+
 .thumbnail-container {
     text-align: center;
-    padding: 1.25rem;
+    padding: 1.5rem 1.25rem .25rem 1.25rem;
 
     & img {
-        width: 80%;
-        height: 80%;
+        width: 75%;
+        height: 75%;
     }
 }
 </style>

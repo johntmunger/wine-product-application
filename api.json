@@ -13,9 +13,9 @@
          "InStock":1,
          "delivery":"Delivery Available",
          "caseGift":"Send case as a gift!",
-         "btnSingle":"Add to Cart",
+         "btnSingle":"Add single item",
          "caseAvailability":1,
-         "btnCase":"Add Case",
+         "btnCase":"Add case",
          "details": {
             "description":"California- A slice of Chardonnay heaven! With silky pear, baked apple and toasted spice, Chardonnay lovers will definitely make Butter Knife their go to wine. Pairs with poultry, white creamy sauces on pasta or seafood.",
             "brand":"Butter Knife",
@@ -33,7 +33,7 @@
       {
          "id":2,
          "type":"Wine",
-         "title":"Double Black Zinfandel Paso Robles",
+         "title":"Black Zinfandel Paso Robles",
          "wineryDirect":0,
          "imageUrl":"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h85/hc1/13287126728734.png",
          "size":"750ml",
@@ -43,9 +43,9 @@
          "InStock":1,
          "delivery":"Delivery Available",
          "caseGift":"Send case as a gift!",
-         "btnSingle":"Add to Cart",
+         "btnSingle":"Add single item",
          "caseAvailability":1,
-         "btnCase":"Add Case",
+         "btnCase":"Add case",
          "details": {
             "description":"Paso Robles, California- This full-bodied, elegant wine explodes with dark berry flavors and finishes with cracked pepper spice. Excellent with BBQ ribs, skirt steak, grilled sausages, and pasta marinara.",
             "brand":"Double Black",
