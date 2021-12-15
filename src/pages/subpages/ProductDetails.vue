@@ -1,28 +1,55 @@
 <template>
   <div class="product-details container">
-      <h4>Product Details</h4>
-      <div>{{ product.title }}</div>
-        <div class="image-container">
-            <img :src="product.imageUrl" />
+
+    <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+            <div class="h-100">
+                <div class="image-container"><img :src="product.imageUrl" /></div>
+            </div>
         </div>
-      <div>${{ product.price }}</div>
-      <div>{{ product.delivery }}</div>
-        <hr />
-      <h4>More Details</h4>
-      <div>{{ detail.description }}</div>
+        <div class="col-md-6">
+            <div class="h-100">
+                <h2>{{ product.title }}</h2>
+                <SmallText>{{ product.size }}</SmallText>
+                <Price>${{ product.price }}</Price>
+                <SmallText>{{ product.delivery }}</SmallText>
+                <SmallText><strong>{{ product.caseGift }}</strong></SmallText>
+
+                <Buttons />
+
+                <div class="bulleted-details">
+                    <div>Brand:<span>{{ detail.brand }}</span></div>
+                    <div>Area:<span>{{ detail.state }}</span></div>
+                    <div>Region:<span>{{ detail.region }}</span></div>
+                    <div>Sku:<span>{{ detail.sku }}</span></div>
+                </div>
+                
+                <hr />
+                <h4>More Details</h4>
+                <p>{{ detail.description }}</p>
+            </div>
+        </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { ref, onMounted } from "vue";
+import { ref, onMounted, defineComponent } from "vue";
 import { IProduct } from "../../interfaces/product";
 import { useRoute } from "vue-router";
 import { appStoreService } from "../../services/appService";
 
-export default {
+// shared components
+import Buttons from "@/components/shared/Buttons.vue";
+import SmallText from "@/components/shared/SmallText.vue";
+import Price from "@/components/shared/Price.vue";
+
+export default defineComponent ({
     name: "ProductDetails",
-    props: {
-        // props go here
+    components: {
+        Buttons,
+        SmallText,
+        Price
     },
     setup() {
         const product = ref({} as IProduct | undefined);
@@ -37,22 +64,35 @@ export default {
 
         return {
             product,
-            detail
+            detail,
         }
     }
-}
+});
 </script>
 
 <style scoped lang="scss">
 .product-details {
     & .image-container {
         text-align: left;
-        padding: 1.5rem;
+        padding-bottom: 2rem;
 
         & img {
-            width: 40%;
-            height: 40%;
+            width: 90%;
+            height: 90%;
         }
+    }
+}
+
+.bulleted-details {
+    padding: 1.5rem 0 0.7rem;
+    width: 35%;
+
+    & div {
+        font-weight: 600;
+    }
+    & span {
+        margin-left: 0.7rem;
+        font-weight: 400;
     }
 }
 </style>

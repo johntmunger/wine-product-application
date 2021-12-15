@@ -1,19 +1,21 @@
 <template>
     <nav class="container cart-container">
         <div class="app-breadcrumb">
-            <span><a href="#">home</a> / </span>
-            <span><a href="#">wine</a> / </span>
-            <span><a href="#">product_name</a></span>
+            <span><a href="/">home</a> / </span>
+            <span><a href="/products">products</a> / </span>
+            <span><a href="#">...</a></span>
         </div>
+
+        <!-- TODO:: increment cart value -->
         <div class="app-shopping-cart">
             <span class="iconify" data-icon="clarity:shopping-cart-outline-badged"></span>
         </div>
     </nav>
 </template>
 
-<script>
+<script lang="ts">
 export default {
-    name: "Nav"
+    name: "Nav",
 }
 </script>
 
@@ -26,8 +28,8 @@ export default {
         margin-top: 0.15rem;
     }
     & .app-breadcrumb a {
-        text-decoration: none;
-        pointer-events: none;
+        // text-decoration: none;
+        // pointer-events: none;
         color: #333;
     }
     & .app-shopping-cart {

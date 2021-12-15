@@ -13,9 +13,7 @@
          "InStock":1,
          "delivery":"Delivery Available",
          "caseGift":"Send case as a gift!",
-         "btnSingle":"Add single item",
          "caseAvailability":1,
-         "btnCase":"Add case",
          "details": {
             "description":"California- A slice of Chardonnay heaven! With silky pear, baked apple and toasted spice, Chardonnay lovers will definitely make Butter Knife their go to wine. Pairs with poultry, white creamy sauces on pasta or seafood.",
             "brand":"Butter Knife",
@@ -43,9 +41,7 @@
          "InStock":1,
          "delivery":"Delivery Available",
          "caseGift":"Send case as a gift!",
-         "btnSingle":"Add single item",
          "caseAvailability":1,
-         "btnCase":"Add case",
          "details": {
             "description":"Paso Robles, California- This full-bodied, elegant wine explodes with dark berry flavors and finishes with cracked pepper spice. Excellent with BBQ ribs, skirt steak, grilled sausages, and pasta marinara.",
             "brand":"Double Black",
