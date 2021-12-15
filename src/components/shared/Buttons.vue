@@ -1,5 +1,5 @@
 <template>
-    <div type="button-container">
+    <div class="button-container">
         <!-- TODO:: use composable reactivity to increment cart value -->
         <Button @click.prevent="onIncrement(1)" disabled>Add to Cart</Button>
         <Button @click.prevent="onIncrement(6)" disabled>Add Case to Cart</Button>
@@ -22,8 +22,20 @@ export default defineComponent ({
 });
 </script>
 
-<style scoped>
-button {
-    margin: 1.5rem .5rem 0 0;
+<style scoped lang="scss">
+.button-container {
+    margin: 1.5rem 0 0 0;
+    
+    & button {
+        width: 100%;
+        margin-bottom: .7rem;
+    }
+}
+
+@media (min-width: 889px) {
+    button {
+        width: auto !important;
+        margin: .5rem .5rem 0 0;
+    }
 }
 </style>

@@ -19,12 +19,6 @@
             "brand":"Butter Knife",
             "state":"California",
             "region":"Central Coast",
-            "wineType":"White Wine",
-            "varietal":"Chardonnay",
-            "body":"Medium",
-            "style":"Elegant",
-            "abv":"14.5%",
-            "taste":"Nutmeg, Butter",
             "sku":174052750
         }
       },
@@ -47,14 +41,162 @@
             "brand":"Double Black",
             "state":"California",
             "region":"Upper Coast",
-            "wineType":"Red Wine",
-            "varietal":"Zinfandel",
-            "body":"Full-bodied",
-            "style":"Elegant",
-            "abv":"14.5%",
-            "taste":"Raspberry, Strawberry, Vanilla",
             "sku":173542750
         }
-      }
+      },
+      {
+        "id":3,
+        "type":"Wine",
+        "title":"Le Collineies Pinot Noir",
+        "wineryDirect":0,
+        "imageUrl":"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h9f/he0/15078179176478.png",
+        "size":"750ml",
+        "reviews":35,
+        "likes":79,
+        "price":"22.99",
+        "InStock":1,
+        "delivery":"Delivery Not Available",
+        "caseGift":"Send case as a gift!",
+        "caseAvailability":1,
+        "details": {
+           "description":"Italy- This silky smooth Pinot Noir has prominent fruit flavors of red berries and cherries. Medium-bodied with soft tannins, this pleasant wine is the perfect accompaniment to not only fish but grilled or roasted chicken or pork.",
+           "brand":"Double Black",
+           "state":"Italy",
+           "region":"Central",
+           "sku":107866750
+       }
+     },
+     {
+        "id":4,
+        "type":"Wine",
+        "title":"Parcelica Chica Monastrell",
+        "wineryDirect":0,
+        "imageUrl":"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h98/h59/15078179438622.png",
+        "size":"750ml",
+        "reviews":68,
+        "likes":48,
+        "price":"9.99",
+        "InStock":1,
+        "delivery":"Delivery Available",
+        "caseGift":"Send case as a gift!",
+        "caseAvailability":1,
+        "details": {
+           "description":"James Suckling-Murcia, Spain - A very rich, juicy wine with the alcohol coming through, but there's plenty of blue fruit and polished, chewy tannins. Flavorful finish. New wood comes through. Yet, I like the opulence and the flavors here.",
+           "brand":"Parcelica",
+           "state":"Spain",
+           "region":"Yecla",
+           "sku":227755750
+       }
+     },
+     {
+        "id":5,
+        "type":"Wine",
+        "title":"Davey Family Shiraz Estate, 17",
+        "wineryDirect":0,
+        "imageUrl":"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h02/ha7/10323589890078.png",
+        "size":"750ml",
+        "reviews":92,
+        "likes":37,
+        "price":"11.99",
+        "InStock":1,
+        "delivery":"Delivery Available",
+        "caseGift":"Send case as a gift!",
+        "caseAvailability":1,
+        "details": {
+           "description":"James Suckling-McLaren Vale, Australia - This has a big, red-cherry, berry and chocolate nose with earthy accents, leading to a really bold, ripe and juicy palate. Tidy finish. Drink now. Screw cap.",
+           "brand":"Davey Family Wine",
+           "state":"Australia",
+           "region":"McLaren Vale",
+           "sku":150523750
+       }
+     },
+     {
+        "id":5,
+        "type":"Wine",
+        "title":"Magic Box Cabernet Sauvignon",
+        "wineryDirect":0,
+        "imageUrl":"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/hc1/he9/15213374767134.png",
+        "size":"750ml",
+        "reviews":73,
+        "likes":24,
+        "price":"8.99",
+        "InStock":1,
+        "delivery":"Delivery Not Available",
+        "caseGift":"Send case as a gift!",
+        "caseAvailability":1,
+        "details": {
+           "description":"France- Deep ruby red color. Intense aromas of ripe red fruits, dark fruits, and spices, supported by oaky notes of toasted aromas and vanilla. Round and fleshy, well structured with soft tannins in the end and a persistent finish with elements of dark fruits and spices.",
+           "brand":"Magic Box",
+           "state":"France",
+           "region":"Central",
+           "sku":236010750
+       }
+     },
+     {
+        "id":6,
+        "type":"Wine",
+        "title":"Governors Bay Sauvignon Blanc",
+        "wineryDirect":0,
+        "imageUrl":"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h97/h58/14015285755934.png",
+        "size":"750ml",
+        "reviews":45,
+        "likes":82,
+        "price":"11.99",
+        "InStock":1,
+        "delivery":"Delivery Available",
+        "caseGift":"Send case as a gift!",
+        "caseAvailability":1,
+        "details": {
+           "description":"Marlborough, New Zealand- This light-bodied wine carries intense flavors of gooseberry, passionfruit, capsicum, along with a hint of melon. Both fresh and crisp to the taste.",
+           "brand":"Governors Bay",
+           "state":"New Zealand",
+           "region":"Marlborough",
+           "sku":139834750
+       }
+     },
+     {
+        "id":7,
+        "type":"Wine",
+        "title":"Prototype Cabernet Sauvignon",
+        "wineryDirect":0,
+        "imageUrl":"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h1f/hc5/11633883217950.png",
+        "size":"750ml",
+        "reviews":37,
+        "likes":29,
+        "price":"9.99",
+        "InStock":1,
+        "delivery":"Delivery Available",
+        "caseGift":"Send case as a gift!",
+        "caseAvailability":1,
+        "details": {
+           "description":"California - Fragrant aromas of black cherries and anise envelop you while flavors of black cherry, anise, blackberries and baking spices come through on the palate. The perfect companion to a steak dinner or hearty pasta dishes.",
+           "brand":"Governors Bay",
+           "state":"New Zealand",
+           "region":"Marlborough",
+           "sku":139834750
+       }
+     },
+     {
+        "id":9,
+        "type":"Wine",
+        "title":"Latitud 42 Rueda Ecologico",
+        "wineryDirect":0,
+        "imageUrl":"https://www.totalwine.com/dynamic/x490,sq/media/sys_master/twmmedia/h4c/h16/13188945510430.png",
+        "size":"750ml",
+        "reviews":45,
+        "likes":83,
+        "price":"10.99",
+        "InStock":1,
+        "delivery":"Delivery Not Available",
+        "caseGift":"Send case as a gift!",
+        "caseAvailability":1,
+        "details": {
+           "description":"Rueda, Spain - Aromatic with both tropical fruit and mineral notes. Hints of fresh herbs on the palate develop into a fresh, fruity and very elegant wine with good persistence, light acidity and a balanced finish. Pairs wonderfully with seafood dishes such as sea bass or salmon.",
+           "brand":"Latitud 42",
+           "state":"Spain",
+           "region":"Rueda",
+           "sku":225716750
+       }
+     }
    ]
 }

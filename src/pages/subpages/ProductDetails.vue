@@ -72,6 +72,9 @@ export default defineComponent ({
 
 <style scoped lang="scss">
 .product-details {
+    & h2 {
+        margin-bottom: 0.3rem;
+    }
     & .image-container {
         text-align: left;
         padding-bottom: 2rem;
@@ -82,7 +85,6 @@ export default defineComponent ({
         }
     }
 }
-
 .bulleted-details {
     padding: 1.5rem 0 0.7rem;
     width: 35%;

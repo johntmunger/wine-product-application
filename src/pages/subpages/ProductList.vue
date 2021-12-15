@@ -83,7 +83,6 @@ export default defineComponent({
         min-height: 500px;
     }
 }
-
 .card-body {
     padding: 1.65rem;
 
@@ -92,10 +91,9 @@ export default defineComponent({
         margin-bottom: 0;
     }
 }
-
 .thumbnail-container {
     text-align: center;
-    padding: 1.5rem 1.25rem .25rem 1.25rem;
+    padding: 1.5rem 1.25rem .5rem 1.25rem;
 
     & img {
         width: 75%;

@@ -25,8 +25,8 @@ export default {
     background-color: darkslategray !important;
 }
 svg {
-    height: 2rem;
-    width: 2rem;
+    height: 2.08rem;
+    width: 2.08rem;
 }
 .title {
     padding-left: .25rem;
