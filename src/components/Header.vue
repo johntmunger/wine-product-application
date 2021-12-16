@@ -31,5 +31,6 @@ svg {
 .title {
     padding-left: .25rem;
     letter-spacing: .0145rem;
+    font-size: 1.3rem;
 }  
 </style>

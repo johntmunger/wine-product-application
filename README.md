@@ -1,20 +1,18 @@
-# wine-product-app
+## Wine Product Application
 
-## Project setup
+### Project setup
 ```
 npm install
 ```
 
-### Sets local dev server and API
+### Sets localhost Dev and JSON Server
 ```
 npm run serve
 ```
 
-### Release notes
-Mobile first single page app using JSON Server for http calls to the frontend utilizing a storefront and services. 
-
-> Vuejs 3 Composition API with TypeScript and Bootstrap CSS on the frontend
+> Vuejs 3 Composition API with TypeScript and Bootstrap CSS on the frontend. Http calls to JSON Server to replicate a backend.
 
 
-### Customize configuration
+
+#### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

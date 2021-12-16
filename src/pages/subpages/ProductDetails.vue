@@ -78,22 +78,18 @@ export default defineComponent ({
     & .image-container {
         text-align: left;
         padding-bottom: 2rem;
-
-        & img {
-            width: 90%;
-            height: 90%;
-        }
+        padding-top: 0.2rem;
     }
 }
 .bulleted-details {
-    padding: 1.5rem 0 0.7rem;
+    padding: .5rem 0 0.7rem;
     width: 35%;
 
     & div {
         font-weight: 600;
     }
     & span {
-        margin-left: 0.7rem;
+        margin-left: 0.6rem;
         font-weight: 400;
     }
 }
