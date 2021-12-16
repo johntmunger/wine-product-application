@@ -62,14 +62,14 @@ export default defineComponent({
             const urlString = val.replace(/\s/g , "-");
 
             return urlString;
-        })
+        });
             
         const fetchSingleProduct = async(id: number): Promise<void> => {
             const val = await appStoreService.getProduct(id);
             const title = await appStoreService.getProductTitle(id);
             
             await router.push(`/products/${val.id}/${replaceSpaceToDash(title)}`);
-        }
+        };
 
         return {
             products,

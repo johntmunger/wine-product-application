@@ -7,7 +7,7 @@
                 <div class="image-container"><img :src="product.imageUrl" /></div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="details col-md-6">
             <div class="h-100">
                 <h2>{{ product.title }}</h2>
                 <SmallText>{{ product.size }}</SmallText>
@@ -76,21 +76,30 @@ export default defineComponent ({
         margin-bottom: 0.3rem;
     }
     & .image-container {
-        text-align: left;
+        text-align: center;
         padding-bottom: 2rem;
-        padding-top: 0.2rem;
+        padding-top: 0.7rem;
+
+        & img {
+            width: 97%;
+            height: 97%;
+        };
     }
 }
-.bulleted-details {
-    padding: .5rem 0 0.7rem;
-    width: 35%;
+.details {
+    padding: 0 1.25rem;
 
-    & div {
-        font-weight: 600;
-    }
-    & span {
-        margin-left: 0.6rem;
-        font-weight: 400;
+    .bulleted-details {
+        padding: .5rem 0 0.7rem;
+        width: 35%;
+
+        & div {
+            font-weight: 600;
+        }
+        & span {
+            margin-left: 0.6rem;
+            font-weight: 400;
+        }
     }
 }
 </style>

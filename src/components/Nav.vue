@@ -1,9 +1,9 @@
 <template>
     <nav class="container cart-container">
         <div class="app-breadcrumb">
-            <span><a href="/">home</a> / </span>
-            <span><a href="/products">products</a> / </span>
-            <span><a href="#">...</a></span>
+            <span><a href="/">...</a> / </span>
+            <span><a href="/products">wine</a> / </span>
+            <span v-if="title"><a href="#">{{ title }}</a></span>
         </div>
 
         <!-- TODO:: increment cart value -->
@@ -14,9 +14,20 @@
 </template>
 
 <script lang="ts">
+import { computed } from "vue";
+import { useRoute } from "vue-router";
+
 export default {
-    name: "Nav",
-}
+  name: "App",
+    setup() {
+        const route = useRoute();
+        const title = computed(() => route.params.title);
+
+        return {
+            title,
+        }
+    }
+};
 </script>
 
 <style scoped lang="scss">
@@ -28,9 +39,14 @@ export default {
         margin-top: 0.15rem;
     }
     & .app-breadcrumb a {
-        // text-decoration: none;
-        // pointer-events: none;
         color: #333;
+    }
+    & .app-breadcrumb span:first-child a {
+        text-decoration: none;
+    }
+    & .app-breadcrumb span:last-child a {
+        text-decoration: none;
+        pointer-events: none;
     }
     & .app-shopping-cart {
         float: right;
