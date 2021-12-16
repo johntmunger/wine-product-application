@@ -20,6 +20,12 @@ class AppStoreService implements IProductService {
         return response.data;
     }
 
+    async getProductTitle(id: IProduct['id']): Promise<IProduct> {
+        const response = await this.axios.get(`${this.config.productEndpoint}/${id}`);
+        // console.log(response.data);
+        return response.data.title;
+    }
+
     async getProductDetails(id: IProduct['id']): Promise<IProduct> {
         const response = await this.axios.get(`${this.config.productEndpoint}/${id}`);
         // console.log(response.data);

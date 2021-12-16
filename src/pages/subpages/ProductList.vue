@@ -53,23 +53,28 @@ export default defineComponent({
         const products = ref<IProduct[]>([]);
         const router = useRouter();
 
-        onMounted(() => {
-            fetchAllProducts();
+        onMounted(async () => {
+            products.value = await appStoreService.getProducts();
         });
 
-        const fetchAllProducts = async (): Promise<void> => {
-            products.value = await appStoreService.getProducts();
-        };
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const replaceSpaceToDash = ((val: any) => {
+            const urlString = val.replace(/\s/g , "-");
 
+            return urlString;
+        })
+            
         const fetchSingleProduct = async(id: number): Promise<void> => {
             const val = await appStoreService.getProduct(id);
-            await router.push(`/products/${val.id}`);
+            const title = await appStoreService.getProductTitle(id);
+            
+            await router.push(`/products/${val.id}/${replaceSpaceToDash(title)}`);
         }
 
         return {
             products,
-            fetchAllProducts,
             fetchSingleProduct,
+            replaceSpaceToDash
         }
     }
 });

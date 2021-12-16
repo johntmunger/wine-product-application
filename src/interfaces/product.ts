@@ -7,13 +7,13 @@ export interface IProduct {
     wineryDirect: number,
     reviews: number,
     likes: number,
-    price: string,
-    InStock: number,
-    delivery: string,
-    caseGift: string,
-    btnSingle: string,
-    caseAvailability: number,
-    btnCase: string,
+    price?: string,
+    InStock?: number,
+    delivery?: string,
+    caseGift?: string,
+    btnSingle?: string,
+    caseAvailability?: number,
+    btnCase?: string,
     details: [IProductDetails]
 }
 
@@ -22,12 +22,12 @@ interface IProductDetails {
     brand: string,
     state: string,
     region: string,
-    wineType: string,
-    varietal: string,
-    body: string,
-    style: string,
-    abv: string,
-    taste: string,
+    wineType?: string,
+    varietal?: string,
+    body?: string,
+    style?: string,
+    abv?: string,
+    taste?: string,
     sku: number
 }
 

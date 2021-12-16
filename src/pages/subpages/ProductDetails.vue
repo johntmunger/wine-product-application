@@ -35,9 +35,9 @@
 
 <script lang="ts">
 import { ref, onMounted, defineComponent } from "vue";
-import { IProduct } from "../../interfaces/product";
+import { IProduct } from "@/interfaces/product";
 import { useRoute } from "vue-router";
-import { appStoreService } from "../../services/appService";
+import { appStoreService } from "@/services/appService";
 
 // shared components
 import Buttons from "@/components/shared/Buttons.vue";
