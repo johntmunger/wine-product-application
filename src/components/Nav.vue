@@ -1,9 +1,9 @@
 <template>
     <nav class="container cart-container">
         <div class="app-breadcrumb">
-            <span><a href="/">...</a> / </span>
-            <span><a href="/products">wine</a> / </span>
-            <span v-if="title"><a href="#">{{ title }}</a></span>
+            <span><a href="/">...</a></span>
+            <span> / <a href="/products">wine</a></span>
+            <span v-if="title"> / <a href="#">{{ title }}</a></span>
         </div>
 
         <!-- TODO:: increment cart value -->
