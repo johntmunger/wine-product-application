@@ -21,12 +21,12 @@
                     <div>Brand:<span>{{ detail.brand }}</span></div>
                     <div>Area:<span>{{ detail.state }}</span></div>
                     <div>Region:<span>{{ detail.region }}</span></div>
-                    <div>Sku:<span>{{ detail.sku }}</span></div>
+                    <div>Sku:<span>{{ detail.sku }}-1</span></div>
                 </div>
                 
                 <hr />
                 <h4>More Details</h4>
-                <p>{{ detail.description }}</p>
+                <p class="description">{{ detail.description }}</p>
             </div>
         </div>
     </div>
@@ -81,24 +81,28 @@ export default defineComponent ({
         padding-top: 0.7rem;
 
         & img {
-            width: 97%;
-            height: 97%;
+            width: 99%;
+            height: 99%;
         };
     }
-}
-.details {
-    padding: 0 1.25rem;
 
-    .bulleted-details {
-        padding: .5rem 0 0.7rem;
-        width: 35%;
+    & .details {
+        padding: 0 1.25rem;
 
-        & div {
-            font-weight: 600;
+        .bulleted-details {
+            padding: .5rem 0 0.7rem;
+
+            & div {
+                font-weight: 600;
+            }
+            & span {
+                margin-left: 0.6rem;
+                font-weight: 400;
+            }
         }
-        & span {
-            margin-left: 0.6rem;
-            font-weight: 400;
+
+        & .description {
+            margin-bottom: 2rem;
         }
     }
 }
